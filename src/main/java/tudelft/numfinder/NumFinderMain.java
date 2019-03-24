@@ -13,5 +13,8 @@ public class NumFinderMain {
 
         System.out.println(nf.getLargest());
         System.out.println(nf.getSmallest());
+        
+        // null pointer exception
+        // nf.find(null);
     }
 }
