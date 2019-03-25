@@ -33,4 +33,18 @@ public class CaesarShiftCipherTest {
         Assertions.assertEquals("temp", cipher.CaesarShiftCipher("temp", 26));
     }
 
+    @Test
+    public void invalid() {
+        Assertions.assertEquals("invalid", cipher.CaesarShiftCipher("TEMP", 26));
+    }
+
+    @Test
+    public void smallJumpCycle() {
+        Assertions.assertEquals("zab", cipher.CaesarShiftCipher("xyz", 2));
+    }
+
+    @Test
+    public void smallReverseJumpCycle() {
+        Assertions.assertEquals("xyz", cipher.CaesarShiftCipher("zab", -2));
+    }
 }
